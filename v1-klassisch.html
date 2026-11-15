@@ -91,20 +91,15 @@
   @media (max-width:860px){.focus .wrap{grid-template-columns:1fr;gap:24px}.focus ul{columns:1}}
 
   /* offers */
-  .offers{background:var(--ink);color:var(--white)}
-  .offers .eyebrow{color:var(--blue)}
-  .offers .intro{max-width:620px;color:#c9c4b9;margin-bottom:52px}
+  .offers{background:var(--cream)}
+  .offers .intro{max-width:620px;color:var(--muted);margin-bottom:52px}
   .offer-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-  .offer{border:1px solid #4a4a42;border-radius:4px;padding:30px 24px;display:flex;flex-direction:column}
+  .offer{background:var(--white);border-radius:4px;padding:30px 24px;display:flex;flex-direction:column}
   .offer .tag{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--rose)}
   .offer h3{margin:12px 0 14px;font-size:26px}
-  .offer ul{list-style:none;font-size:14px;color:#c9c4b9;flex:1}
-  .offer li{padding:7px 0;border-top:1px solid #3c3c35}
-  .offer .price{margin-top:22px;font-size:13px;color:#a8a296}
-  .offer.featured{background:var(--white);color:var(--ink);border-color:var(--white)}
-  .offer.featured ul{color:var(--muted)}
-  .offer.featured li{border-color:var(--line)}
-  .offer.featured .price{color:var(--muted)}
+  .offer ul{list-style:none;font-size:14px;color:var(--muted);flex:1}
+  .offer li{padding:7px 0;border-top:1px solid var(--line)}
+  .offer .price{margin-top:22px;font-size:13px;color:var(--muted)}
   @media (max-width:1000px){.offer-grid{grid-template-columns:1fr 1fr}}
   @media (max-width:560px){.offer-grid{grid-template-columns:1fr}}
 
@@ -236,7 +231,7 @@
     <h2>Wie möchtest du starten?</h2>
     <p class="intro">Das Training passt sich an dich an – nicht du dich an das Training. Wähle die Tiefe an Unterstützung, die du gerade brauchst.</p>
     <div class="offer-grid">
-      <div class="offer featured">
+      <div class="offer">
         <span class="tag">Vor Ort · Berlin</span>
         <h3>Personal Training</h3>
         <ul>
