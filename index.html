@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Website-Entwürfe · Margarita</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  body{margin:0;background:#F2EADF;color:#2B2B25;font-family:"Open Sans",sans-serif;padding:60px 24px}
+  .wrap{max-width:1000px;margin:0 auto}
+  h1{font-family:"Cormorant Garamond",serif;font-weight:500;font-size:48px;margin:0 0 8px}
+  p.sub{color:#6b675e;margin:0 0 40px}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  a{display:block;background:#FCFCFC;border-radius:10px;padding:28px;text-decoration:none;color:inherit;transition:box-shadow .2s}
+  a:hover{box-shadow:0 16px 40px -24px rgba(43,43,37,.5)}
+  .sw{height:90px;border-radius:6px;margin-bottom:18px}
+  h2{font-family:"Cormorant Garamond",serif;font-weight:500;font-size:28px;margin:0 0 6px}
+  small{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#C48A94;font-weight:600}
+  p{font-size:14px;color:#6b675e;line-height:1.6}
+  @media (max-width:760px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Drei Entwürfe</h1>
+  <p class="sub">Gleicher Inhalt, unterschiedliche Gestaltung. Farben &amp; Schriften aus dem Moodboard.</p>
+  <div class="grid">
+    <a href="v1-klassisch.html"><div class="sw" style="background:#F2EADF;border:1px solid #e4d9cb"></div><small>Stabil · keine Animation</small><h2>1 · Klassisch</h2><p>Ruhig und editorial. Cormorant Garamond, viel Weißraum, klare Raster. Lädt schnell, altert nicht.</p></a>
+    <a href="v2-sanft.html"><div class="sw" style="background:linear-gradient(90deg,#2B2B25 0 40%,#7FA8C4 40% 60%,#C48A94 60%)"></div><small>Sanfte Animation</small><h2>2 · Sanft</h2><p>Dunkler Hero mit den Verlaufskacheln aus dem Moodboard, Tenor Sans, weiches Einblenden beim Scrollen.</p></a>
+    <a href="v3-kreativ.html"><div class="sw" style="background:radial-gradient(circle at 80% 120%,#dca2ab 0 45%,transparent 46%),#f6ecea"></div><small>Kreativ · dezent bewegt</small><h2>3 · Kreativ</h2><p>Große Typo mit wechselndem Wort, Handschrift-Akzente, Format-Umschalter, wischbare Story.</p></a>
+  </div>
+</div>
+</body>
+</html>

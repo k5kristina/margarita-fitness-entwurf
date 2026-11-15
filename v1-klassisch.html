@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Margarita – Personal Trainerin Berlin</title>
+<meta name="description" content="Frauen-Fitness ohne extreme Diäten. Personal Training in Berlin und online – Krafttraining, Haltung, Frauengesundheit.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue:#7FA8C4; --ink:#2B2B25; --rose:#C48A94; --cream:#F2EADF; --white:#FCFCFC;
+    --muted:#6b675e; --line:#e4d9cb;
+    --serif:"Cormorant Garamond", Georgia, serif;
+    --sans:"Open Sans", system-ui, sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-feature-settings:"lnum" 1}
+  section{scroll-margin-top:72px}
+  html{scroll-behavior:auto}
+  body{background:var(--white);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.7}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  .eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--blue);font-weight:600}
+  h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.1}
+  h2{font-size:clamp(34px,4.4vw,52px);margin:10px 0 18px}
+  h3{font-size:26px}
+  .btn{display:inline-block;padding:14px 28px;border-radius:999px;background:var(--ink);color:var(--white);text-decoration:none;font-size:14px;letter-spacing:.04em;font-weight:500;transition:background .2s}
+  .btn:hover{background:var(--rose)}
+  .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+  .btn.ghost:hover{background:var(--ink);color:var(--white)}
+  section{padding:96px 0}
+
+  /* placeholder photo frames – replace with real photos */
+  .photo{position:relative;border-radius:4px;overflow:hidden;background:linear-gradient(160deg,#cdbfb8 0%,#c48a94 55%,#7FA8C4 130%)}
+  .photo span{position:absolute;left:16px;bottom:14px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#fff;opacity:.85}
+
+  /* nav */
+  header{position:sticky;top:0;z-index:10;background:rgba(252,252,252,.94);border-bottom:1px solid var(--line)}
+  nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .logo{font-family:var(--serif);font-size:26px;text-decoration:none;letter-spacing:.02em}
+  .logo em{color:var(--rose)}
+  nav ul{display:flex;gap:30px;list-style:none;font-size:14px}
+  nav ul a{text-decoration:none;color:var(--muted)}
+  nav ul a:hover{color:var(--ink)}
+  .logo{white-space:nowrap}
+  @media (max-width:860px){nav ul{display:none}}
+  @media (max-width:480px){.logo{font-size:22px}nav .btn{padding:10px 18px;font-size:13px}}
+
+  /* hero */
+  .hero{background:var(--cream);padding:80px 0 96px}
+  .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center}
+  .hero h1{font-size:clamp(44px,6vw,78px);margin:16px 0 22px}
+  .hero h1 em{color:var(--rose);font-style:italic}
+  .hero p.lead{font-size:18px;color:var(--muted);max-width:30em}
+  .hero .actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+  .hero .photo{aspect-ratio:4/5}
+  .facts{display:flex;gap:36px;margin-top:44px;padding-top:28px;border-top:1px solid var(--line);flex-wrap:wrap}
+  .facts b{display:block;font-family:var(--serif);font-size:34px;font-weight:500;line-height:1}
+  .facts small{font-size:13px;color:var(--muted)}
+  @media (max-width:860px){.hero .wrap{grid-template-columns:1fr;gap:40px}.hero .photo{aspect-ratio:4/3}}
+
+  /* about */
+  .about .wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:72px;align-items:start}
+  .about .photo{aspect-ratio:3/4}
+  .about p{margin-bottom:16px;color:#45433b}
+  .ticks{list-style:none;margin:26px 0}
+  .ticks li{padding:12px 0 12px 30px;border-bottom:1px solid var(--line);position:relative}
+  .ticks li::before{content:"";position:absolute;left:4px;top:22px;width:10px;height:10px;border-radius:50%;background:var(--rose)}
+  blockquote{font-family:var(--serif);font-style:italic;font-size:26px;line-height:1.35;color:var(--ink);border-left:2px solid var(--rose);padding-left:22px;margin-top:30px}
+  @media (max-width:860px){.about .wrap{grid-template-columns:1fr;gap:40px}.about .photo{aspect-ratio:4/3}}
+
+  /* why */
+  .why{background:var(--cream)}
+  .why .intro{max-width:680px;margin-bottom:52px;color:var(--muted)}
+  .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+  .card{background:var(--white);padding:32px 26px;border-radius:4px}
+  .card .num{font-family:var(--serif);font-size:44px;color:var(--rose);line-height:1}
+  .card h3{font-size:23px;margin:14px 0 10px}
+  .card p{font-size:15px;color:var(--muted)}
+  @media (max-width:960px){.grid4{grid-template-columns:1fr 1fr}}
+  @media (max-width:560px){.grid4{grid-template-columns:1fr}}
+
+  /* focus areas */
+  .focus .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px}
+  .focus ul{list-style:none;columns:2;column-gap:40px}
+  .focus li{break-inside:avoid;padding:18px 0;border-bottom:1px solid var(--line);font-family:var(--serif);font-size:22px}
+  .focus li small{display:block;font-family:var(--sans);font-size:13px;color:var(--muted)}
+  @media (max-width:860px){.focus .wrap{grid-template-columns:1fr;gap:24px}.focus ul{columns:1}}
+
+  /* offers */
+  .offers{background:var(--ink);color:var(--white)}
+  .offers .eyebrow{color:var(--blue)}
+  .offers .intro{max-width:620px;color:#c9c4b9;margin-bottom:52px}
+  .offer-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .offer{border:1px solid #4a4a42;border-radius:4px;padding:30px 24px;display:flex;flex-direction:column}
+  .offer .tag{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--rose)}
+  .offer h3{margin:12px 0 14px;font-size:26px}
+  .offer ul{list-style:none;font-size:14px;color:#c9c4b9;flex:1}
+  .offer li{padding:7px 0;border-top:1px solid #3c3c35}
+  .offer .price{margin-top:22px;font-size:13px;color:#a8a296}
+  .offer.featured{background:var(--white);color:var(--ink);border-color:var(--white)}
+  .offer.featured ul{color:var(--muted)}
+  .offer.featured li{border-color:var(--line)}
+  .offer.featured .price{color:var(--muted)}
+  @media (max-width:1000px){.offer-grid{grid-template-columns:1fr 1fr}}
+  @media (max-width:560px){.offer-grid{grid-template-columns:1fr}}
+
+  /* story */
+  .story .wrap{max-width:820px}
+  .timeline{margin-top:40px;border-left:1px solid var(--line);padding-left:30px}
+  .timeline div{position:relative;padding-bottom:30px}
+  .timeline div::before{content:"";position:absolute;left:-35px;top:9px;width:9px;height:9px;border-radius:50%;background:var(--blue)}
+  .timeline h3{font-size:22px}
+  .timeline p{color:var(--muted);font-size:15px}
+
+  /* knowledge */
+  .tips{background:var(--cream)}
+  .tip-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+  .tip{background:var(--white);border-radius:4px;padding:28px;text-decoration:none;display:block;transition:transform .2s}
+  .tip:hover h3{color:var(--rose)}
+  .tip .eyebrow{font-size:11px}
+  .tip h3{font-size:22px;margin:10px 0}
+  .tip p{font-size:14px;color:var(--muted)}
+  @media (max-width:860px){.tip-grid{grid-template-columns:1fr}}
+
+  /* steps / cta */
+  .start{text-align:center}
+  .start .wrap{max-width:860px}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin:44px 0}
+  .steps div{text-align:center}
+  .steps b{display:inline-grid;place-items:center;width:52px;height:52px;border-radius:50%;background:var(--cream);color:var(--rose);font-family:var(--serif);font-size:24px;font-weight:500;margin-bottom:12px}
+  .steps p{font-size:15px;color:var(--muted)}
+  @media (max-width:640px){.steps{grid-template-columns:1fr}}
+  .freebie{margin-top:56px;padding:28px;border:1px dashed var(--rose);border-radius:4px;font-size:15px}
+  .freebie a{color:var(--rose)}
+
+  footer{border-top:1px solid var(--line);padding:36px 0;font-size:13px;color:var(--muted)}
+  footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+  footer a{text-decoration:none;margin-left:18px}
+</style>
+</head>
+<body>
+<a href="index.html" style="position:fixed;z-index:999;left:max(16px,env(safe-area-inset-left,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));background:#2B2B25;color:#FCFCFC;font:500 12px/1 'Open Sans',system-ui,sans-serif;letter-spacing:.04em;padding:11px 16px;border-radius:999px;text-decoration:none;box-shadow:0 8px 24px -10px rgba(0,0,0,.5)">Entwurf 1 · Klassisch · ← Alle Entwürfe</a>
+
+<header>
+  <nav class="wrap">
+    <a class="logo" href="#">Margarita <em>Fitness</em></a>
+    <ul>
+      <li><a href="#about">Über mich</a></li>
+      <li><a href="#why">Coaching</a></li>
+      <li><a href="#offers">Formate</a></li>
+      <li><a href="#story">Mein Weg</a></li>
+      <li><a href="#start">Kontakt</a></li>
+    </ul>
+    <a class="btn" href="https://ig.me/m/margarita_fitness_berlin" target="_blank" rel="noopener">Termin anfragen</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Personal Trainerin · Berlin &amp; Online</p>
+      <h1>Frauen-Fitness <em>ohne</em> extreme Diäten</h1>
+      <p class="lead">Krafttraining, gesunde Haltung und Frauengesundheit – genau in deinem Tempo. Ohne Stress, ohne Ausbrennen, ohne Verbote.</p>
+      <div class="actions">
+        <a class="btn" href="https://ig.me/m/margarita_fitness_berlin" target="_blank" rel="noopener">Schreib mir „START“</a>
+        <a class="btn ghost" href="#offers">Formate ansehen</a>
+      </div>
+      <div class="facts">
+        <div><b>10</b><small>Jahre Erfahrung</small></div>
+        <div><b>1:1</b><small>Training &amp; Begleitung</small></div>
+        <div><b>Berlin</b><small>Fitness First &amp; weltweit online</small></div>
+      </div>
+    </div>
+    <div class="photo"><span>Foto · Margarita im Studio</span></div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="photo"><span>Foto · Porträt</span></div>
+    <div>
+      <p class="eyebrow">Über mich</p>
+      <h2>Hallo, ich bin Margarita!</h2>
+      <p>Als zertifizierter Fitness-Coach mit 10 Jahren Erfahrung helfe ich dir, deinen Körper neu zu spüren und deine Ziele ohne Stress, Ausbrennen oder extreme Diäten zu erreichen.</p>
+      <p>Für mich ist Sport keine Strafe, sondern eine Form der Selbstfürsorge. Mein Ansatz verbindet effektives Krafttraining, Frauengesundheit und individuelle Betreuung – genau in deinem Tempo.</p>
+      <ul class="ticks">
+        <li>Zertifizierte und lizenzierte Personal Trainerin mit 10 Jahren Erfahrung</li>
+        <li>Spezialisiert auf Frauengesundheit, Haltung, funktionelle Kraft &amp; Wohlbefinden</li>
+        <li>Freundliche Unterstützung – Expertin und Begleiterin zugleich</li>
+      </ul>
+      <blockquote>„Physische Kraft und Gesundheit sind das Fundament deiner Schönheit, Lebensqualität und Freiheit, ganz du selbst zu sein.“</blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="wrap">
+    <p class="eyebrow">Warum mein Coaching?</p>
+    <h2>Struktur statt Überforderung</h2>
+    <p class="intro">Viele scheitern nicht am Training selbst, sondern an fehlender Struktur, Überforderung oder der Angst vor dem Fitnessstudio. Ich begleite dich Schritt für Schritt – mit Leichtigkeit, Verstand und voller Empathie.</p>
+    <div class="grid4">
+      <div class="card"><div class="num">01</div><h3>Gezieltes Kraft- &amp; Funktionstraining</h3><p>Ein durchdachtes Training für mehr Kraft, Energie, Vitalität und eine gesunde Haltung – ohne Überlastung.</p></div>
+      <div class="card"><div class="num">02</div><h3>Ernährung ohne Verbote</h3><p>Keine radikalen Einschränkungen. Wir etablieren gesunde Gewohnheiten, die in deinen Alltag passen und dir Freude bereiten.</p></div>
+      <div class="card"><div class="num">03</div><h3>Achtsames Mindset</h3><p>Wir überwinden Ängste und Unsicherheiten. Ich helfe dir, Bewegung wieder zu lieben und nachhaltig dranzubleiben.</p></div>
+      <div class="card"><div class="num">04</div><h3>Flexibel &amp; zeitsparend</h3><p>Pläne, abgestimmt auf deinen Lebensrhythmus – ideal für vielbeschäftigte Frauen, die klare Ergebnisse ohne Chaos wollen.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="focus">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Schwerpunkte</p>
+      <h2>Was dich erwartet</h2>
+      <p style="color:var(--muted)">Besonders für Frauen mit Büroalltag: weniger Nacken- und Rückenschmerzen, leichtere Beine, mehr Energie nach dem Feierabend.</p>
+    </div>
+    <ul>
+      <li>Nachhaltige Gewichtsreduktion<small>ohne strenge Diäten</small></li>
+      <li>Krafttraining für Frauen<small>für Stärke und Energie</small></li>
+      <li>Schöne &amp; straffe Figur<small>gezielter Muskelaufbau</small></li>
+      <li>TRX &amp; funktionelles Training<small>Kraft, die im Alltag hilft</small></li>
+      <li>Mobilität &amp; gesunder Rücken<small>Frauengesundheit &amp; Haltung</small></li>
+      <li>Ernährung ohne Verbote<small>Gewohnheiten statt Regeln</small></li>
+      <li>Persönliche Begleitung<small>Empathie &amp; Motivation</small></li>
+    </ul>
+  </div>
+</section>
+
+<section class="offers" id="offers">
+  <div class="wrap">
+    <p class="eyebrow">Formate</p>
+    <h2>Wie möchtest du starten?</h2>
+    <p class="intro">Das Training passt sich an dich an – nicht du dich an das Training. Wähle die Tiefe an Unterstützung, die du gerade brauchst.</p>
+    <div class="offer-grid">
+      <div class="offer featured">
+        <span class="tag">Vor Ort · Berlin</span>
+        <h3>Personal Training</h3>
+        <ul>
+          <li>Exklusives 1:1 in den Fitness First Clubs</li>
+          <li>Präzise Technikkorrektur</li>
+          <li>Jede Bewegung tief spüren</li>
+        </ul>
+        <p class="price">Preis auf Anfrage</p>
+      </div>
+      <div class="offer">
+        <span class="tag">Format 1 · Online</span>
+        <h3>Live Online-Training</h3>
+        <ul>
+          <li>1:1 in Echtzeit per Videoanruf</li>
+          <li>Sofortige Korrektur deiner Technik</li>
+          <li>Plan angepasst an Haltung, Füße &amp; Rücken</li>
+          <li>Zu Hause, im Büro oder auf Reisen</li>
+        </ul>
+        <p class="price">Preis auf Anfrage</p>
+      </div>
+      <div class="offer">
+        <span class="tag">Format 2 · Online</span>
+        <h3>Online-Begleitung</h3>
+        <ul>
+          <li>Persönlicher Plan mit Übungsvideos</li>
+          <li>Video-Analyse deiner Technik</li>
+          <li>Messenger-Kontakt, Antwort in 24 h</li>
+          <li>Wöchentlicher Check-in</li>
+        </ul>
+        <p class="price">Preis auf Anfrage</p>
+      </div>
+      <div class="offer">
+        <span class="tag">Einmalig</span>
+        <h3>Einzelberatung</h3>
+        <ul>
+          <li>Ernährungs- &amp; Zielanalyse</li>
+          <li>Fehlersuche im aktuellen Training</li>
+          <li>Klarer Fahrplan für deinen Weg</li>
+        </ul>
+        <p class="price">Preis auf Anfrage</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="story" id="story">
+  <div class="wrap">
+    <p class="eyebrow">Mein Weg</p>
+    <h2>Vom Turniertanz ins Krafttraining</h2>
+    <div class="timeline">
+      <div><h3>13 Jahre Turniertanz</h3><p>Studium zur Choreografin, mit 18 die ersten eigenen Kinderkurse.</p></div>
+      <div><h3>Gruppenfitness &amp; Leitung</h3><p>Mit 22 Leitung der Gruppenfitnessprogramme – zwei Jahre Management, Organisation und Teamführung.</p></div>
+      <div><h3>Lernen ohne Pause</h3><p>Zertifizierungen in TRX, Pilates und „Gesunder Rücken“, sechsmonatige Ausbildung zur Fitness-Presenterin.</p></div>
+      <div><h3>Funktionelles Training</h3><p>Arbeit im Top-Studio HIITWORKS an der Seite erfahrener Trainer.</p></div>
+      <div><h3>Heute: Berlin</h3><p>Personal Training bei Fitness First und Online-Coaching für Frauen weltweit.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="tips">
+  <div class="wrap">
+    <p class="eyebrow">Wissen</p>
+    <h2>Aus meinem Instagram</h2>
+    <div class="tip-grid">
+      <a class="tip" href="https://www.instagram.com/margarita_fitness_berlin/" target="_blank" rel="noopener"><span class="eyebrow">Büroalltag</span><h3>Ohne Dauerschmerz nach 8 Stunden Schreibtisch</h3><p>Erst Blockaden lösen, dann Gewicht auf die Stange – die richtige Reihenfolge.</p></a>
+      <a class="tip" href="https://www.instagram.com/margarita_fitness_berlin/" target="_blank" rel="noopener"><span class="eyebrow">Haltung</span><h3>Haltung ist das beste Anti-Aging</h3><p>Warum ein starker oberer Rücken gegen „Tech Neck“ mehr hilft als teure Cremes.</p></a>
+      <a class="tip" href="https://www.instagram.com/margarita_fitness_berlin/" target="_blank" rel="noopener"><span class="eyebrow">Ernährung</span><h3>„Nichts essen nach 18 Uhr“?</h3><p>Warum der Mythos bei Bürojobs oft genau das Gegenteil bewirkt.</p></a>
+    </div>
+  </div>
+</section>
+
+<section class="start" id="start">
+  <div class="wrap">
+    <p class="eyebrow">So startest du</p>
+    <h2>Welches Format passt zu dir?</h2>
+    <div class="steps">
+      <div><b>1</b><p>Schreib mir das Wort <strong>„START“</strong> per DM</p></div>
+      <div><b>2</b><p>Wir besprechen deine Ziele und analysieren deine Haltung</p></div>
+      <div><b>3</b><p>Wir wählen gemeinsam das Format, das zu deinem Alltag passt</p></div>
+    </div>
+    <a class="btn" href="https://ig.me/m/margarita_fitness_berlin" target="_blank" rel="noopener">Nachricht auf Instagram schreiben</a>
+    <p class="freebie">Kostenlos: <a href="https://linktr.ee/margarita_fitness_berlin" target="_blank" rel="noopener">Wochen-Trainingsplan als Vorlage</a> herunterladen.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Margarita · Personal Trainerin Berlin</span>
+    <span><a href="https://www.instagram.com/margarita_fitness_berlin/" target="_blank" rel="noopener">Instagram</a><a href="#">Impressum</a><a href="#">Datenschutz</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
