@@ -126,21 +126,14 @@
   .fmt dt{font-family:var(--label);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
   .fmt dd{font-size:14px;line-height:1.5}
   .fmt .btn{justify-content:center;align-self:end}
-  .fmt .match{display:none;font-family:var(--label);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--paper);background:var(--rose);border-radius:999px;padding:4px 10px;justify-self:start}
+  .fmt .top{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;min-height:24px}
+  .fmt .match{display:none;font-family:var(--label);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--paper);background:var(--rose);border-radius:999px;padding:4px 10px}
   .compare.picked .fmt{opacity:.45}
   .compare.picked .fmt.is-match{opacity:1;transform:translateY(-6px);box-shadow:0 0 0 2px var(--rose)}
   .compare.picked .fmt.is-match .match{display:inline-block}
   @media (max-width:1060px){.compare{grid-template-columns:1fr 1fr}}
   @media (max-width:600px){.compare{grid-template-columns:1fr}}
   @media (prefers-reduced-motion:reduce){.fmt{transition:none}.compare.picked .fmt.is-match{transform:none}}
-
-  /* desk habits – her own advice, usable today */
-  .desk-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
-  .habit{border:1px solid var(--line);border-radius:8px;padding:28px;display:grid;gap:10px;align-content:start}
-  .habit .when{font-family:var(--label);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--blue)}
-  .habit h3{font-size:26px}
-  .habit p{font-size:15px;color:var(--muted)}
-  @media (max-width:880px){.desk-grid{grid-template-columns:1fr}}
 
   /* story – chronological, labelled by her age/period */
   .story{background:var(--cream)}
@@ -313,7 +306,7 @@
 
     <div class="compare" id="compare">
       <article class="fmt" data-f="berlin">
-        <span class="kind">Vor Ort · Berlin</span>
+        <div class="top"><span class="kind">Vor Ort · Berlin</span><span class="match">Passt zu dir</span></div>
         <h3>Personal Training</h3>
         <p class="tagline">jede Bewegung tief spüren</p>
         <dl>
@@ -321,11 +314,10 @@
           <div class="row"><dt>Technik</dt><dd>Direkte Korrektur vor Ort – am präzisesten</dd></div>
           <div class="row"><dt>Ideal, wenn</dt><dd>du die perfekte Ausführung lernen und im Studio durchstarten willst</dd></div>
         </dl>
-        <div><span class="match">Passt zu dir</span></div>
         <a class="btn" href="https://ig.me/m/margarita_fitness_berlin" target="_blank" rel="noopener">Anfragen</a>
       </article>
       <article class="fmt" data-f="live">
-        <span class="kind">Format 1 · Online</span>
+        <div class="top"><span class="kind">Format 1 · Online</span><span class="match">Passt zu dir</span></div>
         <h3>Live Online-Training</h3>
         <p class="tagline">online, aber maximal persönlich</p>
         <dl>
@@ -333,11 +325,10 @@
           <div class="row"><dt>Technik</dt><dd>Sofortiges Feedback bei jeder Wiederholung</dd></div>
           <div class="row"><dt>Ideal, wenn</dt><dd>du live begleitet werden willst, egal wo du bist</dd></div>
         </dl>
-        <div><span class="match">Passt zu dir</span></div>
         <a class="btn" href="https://ig.me/m/margarita_fitness_berlin" target="_blank" rel="noopener">Anfragen</a>
       </article>
       <article class="fmt" data-f="plan">
-        <span class="kind">Format 2 · Online</span>
+        <div class="top"><span class="kind">Format 2 · Online</span><span class="match">Passt zu dir</span></div>
         <h3>Online-Begleitung</h3>
         <p class="tagline">Freiheit im Alltag</p>
         <dl>
@@ -345,11 +336,10 @@
           <div class="row"><dt>Technik</dt><dd>Video-Analyse, Messenger-Antwort innerhalb von 24 h, wöchentlicher Check-in</dd></div>
           <div class="row"><dt>Ideal, wenn</dt><dd>du ohne festen Termin trainieren und flexibel bleiben möchtest</dd></div>
         </dl>
-        <div><span class="match">Passt zu dir</span></div>
         <a class="btn" href="https://ig.me/m/margarita_fitness_berlin" target="_blank" rel="noopener">Anfragen</a>
       </article>
       <article class="fmt" data-f="consult">
-        <span class="kind">Einmalig</span>
+        <div class="top"><span class="kind">Einmalig</span><span class="match">Passt zu dir</span></div>
         <h3>Einzelberatung</h3>
         <p class="tagline">ein klarer Fahrplan</p>
         <dl>
@@ -357,24 +347,8 @@
           <div class="row"><dt>Technik</dt><dd>Fehlersuche in deinem aktuellen Training</dd></div>
           <div class="row"><dt>Ideal, wenn</dt><dd>du konkrete Antworten und einen Plan für deinen Weg brauchst</dd></div>
         </dl>
-        <div><span class="match">Passt zu dir</span></div>
         <a class="btn" href="https://ig.me/m/margarita_fitness_berlin" target="_blank" rel="noopener">„BERATUNG“ schreiben</a>
       </article>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="head">
-      <p class="label">Probier es heute aus</p>
-      <h2>Drei Gewohnheiten für deinen <em>Schreibtisch</em></h2>
-      <p class="lead">Langes Sitzen bremst Durchblutung und Lymphfluss – Beine und Unterbauch wirken schwer. Diese drei Übungen helfen sofort.</p>
-    </div>
-    <div class="desk-grid">
-      <div class="habit"><span class="when">Im Sitzen</span><h3>3D-Atmung</h3><p>Aufrecht hinsetzen, Hände an die unteren Rippen legen und tief in Bauch und Seiten atmen. Das aktiviert das Zwerchfell als natürliche Lymphpumpe.</p></div>
-      <div class="habit"><span class="when">Jede Stunde</span><h3>Hüftbeuger strecken</h3><p>Kurz aufstehen und das Becken sanft nach vorne schieben, um die Leiste zu öffnen.</p></div>
-      <div class="habit"><span class="when">Zwischendurch</span><h3>Wadenpumpe</h3><p>Im Sitzen abwechselnd von den Zehenspitzen auf die Fersen wippen – das regt den Rückfluss aus den Beinen an.</p></div>
     </div>
   </div>
 </section>
